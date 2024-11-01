@@ -79,7 +79,7 @@ namespace productoReposotory
 
 
         public void EliminarProducto(int id){
-            var query = "DELETE  FROM Productos WHERE idProducto = @id";
+            var query = "DELETE FROM Productos WHERE idProducto = @id";
             using (SqliteConnection connection = new SqliteConnection(CadenaDeConexion)){
                 connection.Open();
                 var command = new SqliteCommand(query, connection);

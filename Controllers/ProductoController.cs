@@ -14,11 +14,11 @@ public class ProductoController : ControllerBase{
         _productosRepository = new ProductosRepository();
     }
 
-    [HttpPost]
+    [HttpPost("/api/Producto")]
     public IActionResult CrearProducto([FromBody] Productos newProd){
         try{
             _productosRepository.CrearProducto(newProd);
-            return Ok("Productos creado satisfactoriamente");
+            return Ok("Producto creado satisfactoriamente");
         }
         catch(Exception ex){
             return StatusCode(500, $"ERROR {ex.Message}");

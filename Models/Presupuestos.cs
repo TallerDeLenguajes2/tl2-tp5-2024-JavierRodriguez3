@@ -10,10 +10,20 @@ namespace presupuestos
         private int idPresupuesto;
         private string nombreDestinatario;
         private List<PresupuestoDetalle> detalle;
+        private string fechaCreacion;
 
         public int IdPresupuesto { get => idPresupuesto; set => idPresupuesto = value; }
         public string NombreDestinatario { get => nombreDestinatario; set => nombreDestinatario = value; }
         public List<PresupuestoDetalle> Detalle { get => detalle; set => detalle = value; }
+        public string FechaCreacion { get => fechaCreacion; set => fechaCreacion = value; }
+
+        public Presupuestos(int idPresupuesto, string nombreDestinatario, string fechaCreacion, List<PresupuestoDetalle> detalle)
+    {
+        this.idPresupuesto = idPresupuesto;
+        this.nombreDestinatario = nombreDestinatario;
+        this.fechaCreacion = fechaCreacion;
+        this.detalle = detalle;
+    }
 
         public float MontoPresupuesto()
         {
